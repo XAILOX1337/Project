@@ -6,4 +6,3 @@ def func(s):
 
         print(sim,count)
 
-func('kdkkdkd')
