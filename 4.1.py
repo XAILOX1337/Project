@@ -1,8 +1,7 @@
-def func(s):
-    sim_cou = {}
-    for sim in s:
-        sim_cou[sim] = sim_cou.get(sim,0) + 1
-    for sim, count in sim_cou.items():
-
-        print(sim,count)
-
+slovo = str(input())
+a = slovo[::-1] 
+if slovo == a:
+  print("yes")
+else:
+  print("no")
+# во второй строке создаём перевёрнутое слово, а потом сравниваем с заданым. Если они одинаковые то слово-палиндром
