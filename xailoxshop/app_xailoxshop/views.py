@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-
+from .models import xailox
 
 def index(request):
-    return render(request, 'index.html')
+    xailoxs = xailox.objects.all()
+    context = {'xailoxs' : xailoxs}
+    return render(request, 'index.html', context)
 
 
 def top_sellers(request):
@@ -20,3 +22,4 @@ def login(request):
 
 def profile(request):
     return render(request, 'profile.html')
+
